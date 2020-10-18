@@ -1,0 +1,32 @@
+service:
+  name: bowling-api
+
+custom:
+  webpack:
+    webpackConfig: "./webpack.config.js"
+    includeModules: true
+  dynamodb:
+    stages:
+      - dev
+
+plugins:
+  - serverless-webpack
+  - serverless-offline
+  - serverless-dynamodb-local
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  region: eu-west-2
+  apiGateway:
+    minimumCompressionSize: 1024
+  environment:
+    AWS_NODEJS_CONNECTION_REUSE_ENABLED: 1
+
+functions:
+  updateScore:
+    handler: src/score.update
+    events:
+      - http:
+          method: post
+          path: updateScore
