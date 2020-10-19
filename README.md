@@ -2,15 +2,18 @@
 
 ## 🚀 Getting started
 
+### Installation
+
 - Install packages using `yarn`
-- Run locally using `yarn dev`
-- You can then post to: `localhost:3000/dev/updateScore`
-
-### To use Serverless DynamoDB Local
-
 - Install a Java JDK from [here](https://www.oracle.com/uk/java/technologies/javase-downloads.html)
 - Install dynamo DB locally using `yarn db:install`
-- Run dynamo DB locally using `yarn db:run`
+
+### To set up the rest of the project
+
+- Run the DB in one terminal using `yarn db:run`
+  - This will also run any migrations.
+- Run serverless offline in another terminal using `yarn dev`
+- You can then post to: `localhost:3000/dev/updateScore`
 
 
 ## 🎯 Aims
@@ -41,3 +44,5 @@
 ## 📚 References
 
 - Serverless DynamoDB Local: https://www.serverless.com/plugins/serverless-dynamodb-local
+  - GitHub: https://github.com/99x/serverless-dynamodb-local
+- DynamoDB examples: https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/dynamodb-examples.html

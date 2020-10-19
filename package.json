@@ -4,10 +4,11 @@
   "description": "Pair-programming exercise: bowling API",
   "scripts": {
     "db:install": "serverless dynamodb install",
-    "db:run": "serverless dynamodb start",
+    "db:run": "serverless dynamodb start --migrate",
     "dev": "serverless offline"
   },
   "dependencies": {
+    "aws-sdk": "^2.773.0",
     "source-map-support": "^0.5.10"
   },
   "devDependencies": {

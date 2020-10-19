@@ -11,8 +11,8 @@ custom:
 
 plugins:
   - serverless-webpack
-  - serverless-offline
   - serverless-dynamodb-local
+  - serverless-offline
 
 provider:
   name: aws
