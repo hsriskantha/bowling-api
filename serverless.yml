@@ -30,3 +30,8 @@ functions:
       - http:
           method: post
           path: updateScore
+
+# resources:
+#   Resources:
+#     ScoresTable:
+#       Type: AWS::DynamoDB::Table          
