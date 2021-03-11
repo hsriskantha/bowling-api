@@ -1,21 +1,4 @@
 # 🎳 Bowling API 
-
-## 🚀 Getting started
-
-### Installation
-
-- Install packages using `yarn`
-- Install a Java JDK from [here](https://www.oracle.com/uk/java/technologies/javase-downloads.html)
-- Install dynamo DB locally using `yarn db:install`
-
-### To set up the rest of the project
-
-- Run the DB in one terminal using `yarn db:run`
-  - This will also run any migrations.
-- Run serverless offline in another terminal using `yarn dev`
-- You can then post to: `localhost:3000/dev/updateScore`
-
-
 ## 🎯 Aims
 
 - Using the Serverless framework, create an API that tracks the score for a (one-player) game of bowling. 
@@ -41,8 +24,11 @@
 - Hence a perfect game can be completed in twelve rolls, for 300 points.
 
 
-## 📚 References
+## 🚀 Running the Code
 
-- Serverless DynamoDB Local: https://www.serverless.com/plugins/serverless-dynamodb-local
-  - GitHub: https://github.com/99x/serverless-dynamodb-local
-- DynamoDB examples: https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/dynamodb-examples.html
+- Run serverless offline in another terminal using `yarn dev`
+- You can then post to: `localhost:3000/dev/updateScore`
+- You can post using curl, for example:
+```
+curl -X POST localhost:3000/dev/updateScore -H "Content-Type: application/json" -d '{"round": 1}'
+```
