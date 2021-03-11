@@ -5,7 +5,8 @@
   "scripts": {
     "db:install": "serverless dynamodb install",
     "db:run": "serverless dynamodb start --migrate",
-    "dev": "serverless offline"
+    "dev": "serverless offline",
+    "test": "jest"
   },
   "dependencies": {
     "aws-sdk": "^2.831.0",
@@ -13,16 +14,19 @@
   },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.17",
+    "@types/jest": "^26.0.20",
     "@types/node": "^10.12.18",
     "@types/serverless": "^1.72.5",
     "fork-ts-checker-webpack-plugin": "^3.0.1",
+    "jest": "^26.6.3",
     "serverless": "^2.8.0",
     "serverless-dynamodb-local": "^0.2.39",
     "serverless-offline": "^6.8.0",
     "serverless-webpack": "^5.2.0",
+    "ts-jest": "^26.5.3",
     "ts-loader": "^5.3.3",
     "ts-node": "^8.10.2",
-    "typescript": "^3.2.4",
+    "typescript": "^4.2.3",
     "webpack": "^4.29.0",
     "webpack-node-externals": "^1.7.2"
   },

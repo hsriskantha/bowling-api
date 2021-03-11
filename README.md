@@ -30,5 +30,7 @@
 - You can then post to: `localhost:3000/dev/updateScore`
 - You can post using curl, for example:
 ```
-curl -X POST localhost:3000/dev/updateScore -H "Content-Type: application/json" -d '{"round": 1}'
+curl -X POST localhost:3000/dev/updateScore -H "Content-Type: application/json" -d '{"frame": 1}'
 ```
+- Or you can run unit tests using `yarn jest`.
+
