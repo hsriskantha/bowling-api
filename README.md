@@ -3,8 +3,7 @@
 
 - Using the Serverless framework, create an API that tracks the score for a (one-player) game of bowling. 
 - To start with, you'll need to update the existing `/updateScore` endpoint.
-- It should store the scores in a DynamoDB table.
-  - For simplicity, you don't need to use migrations to set it up.
+- Store any data in memory for now. 
 - Then, create another endpoint `/getScore` that should return the score.
 - Note that this is deliberately a challenge that you're unlikely to finish!
 
