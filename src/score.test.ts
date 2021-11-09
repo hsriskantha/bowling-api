@@ -3,6 +3,10 @@ import { APIGatewayProxyEvent } from "aws-lambda";
 import { update } from "./score";
 
 describe("score", () => {
+  beforeEach(() => {
+    // Run code before each test
+  });
+
   test("returns hello world", async () => {
     const event = {} as any as APIGatewayProxyEvent;
     const response = await update(event, null, () => {});
