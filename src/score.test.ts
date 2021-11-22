@@ -9,7 +9,7 @@ describe("score", () => {
 
   test("returns hello world", async () => {
     const event = {
-      body: {},
+      body: JSON.stringify({}),
     } as APIGatewayProxyEvent;
     const response = await update(event, null, () => {});
 
