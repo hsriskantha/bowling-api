@@ -3,9 +3,8 @@
 ## 🎯 Aims
 
 - Using the Serverless framework, create an API that tracks the score for a (one-player) game of bowling.
-- To start with, you'll need to update the existing `/updateScore` endpoint.
+- It should accept the score from a single frame, and return the total score.
 - Store any data in memory for now.
-- Then, create another endpoint `/getScore` that should return the score.
 - Note that this is deliberately a challenge that you're unlikely to finish!
 
 ## ✏️ A quick guide to scoring
@@ -24,6 +23,16 @@
 
 ## 🚀 Running the Code
 
+For the purposes of this exercise, it's simplest to use test-driven development.
+
+You can run the tests in watch mode using:
+
+```
+yarn test --watch
+```
+
+However, if you wanted to run your code locally:
+
 - Run serverless offline in another terminal using `yarn dev`
 - You can then post to: `localhost:3000/dev/updateScore`
 - You can post using curl, for example:
@@ -31,5 +40,3 @@
 ```
 curl -X POST localhost:3000/dev/updateScore -H "Content-Type: application/json" -d '{"frame": 1}'
 ```
-
-- Or you can run unit tests using `yarn jest`.
